@@ -1,12 +1,11 @@
-package com.upc.projects.enzoftware.eventour
+package com.upc.projects.enzoftware.eventour.ui.activities
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-
-import kotlinx.android.synthetic.main.activity_on_boarding.*
+import com.upc.projects.enzoftware.eventour.R
 
 class OnBoardingActivity : AppCompatActivity() {
 
