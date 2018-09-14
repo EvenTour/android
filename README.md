@@ -1,1 +1,1 @@
-# eventour-android
+# Eventour
