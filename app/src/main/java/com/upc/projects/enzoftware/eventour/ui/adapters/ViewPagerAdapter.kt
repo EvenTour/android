@@ -1,23 +1,31 @@
 package com.upc.projects.enzoftware.eventour.ui.adapters
 
+import android.content.Context
 import android.support.v4.view.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
+import android.view.LayoutInflater
 
-class ViewPagerAdapter : PagerAdapter(){
+
+
+class ViewPagerAdapter(val layouts : ArrayList<Int>, val context: Context) : PagerAdapter(){
+    lateinit var layoutInflater: LayoutInflater
+
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        return super.instantiateItem(container, position)
+        layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(layouts[position], container, false)
+        container.addView(view)
+        return view
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+      return view == `object`
     }
 
-    override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun getCount(): Int = layouts.size
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
+        val view = `object` as View
+        container.removeView(view)
     }
 }
