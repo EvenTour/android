@@ -11,19 +11,16 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-    <string name="slide_food_title">Hello Food!</string>
-    <string name="slide_food_desc">The easiest way to order food from your favourite restaurant!</string>
+    <string name="slide_intro_title">Hello EvenTourists!</string>
+    <string name="slide_intro_desc">The easiest way to organize your event</string>
 
-    <string name="slide_ticket_title">Movie Tickets</string>
-    <string name="slide_ticket_desc">Book movie tickets for your family and friends!</string>
+    <string name="slide_calendar_title">Schedule Maker</string>
+    <string name="slide_calendar_desc">Make your personalized schedules for each event you will go.</string>
 
-    <string name="slide_discount_title">Great Discounts</string>
-    <string name="slide_discount_desc">Best discounts on every single service we offer!</string>
+    <string name="slide_placeholder_title">Travel around the event</string>
+    <string name="slide_placeholder_desc">We offer you a personalized map from event. You don\'t be lost anymore!</string>
 
-    <string name="slide_travel_title">World Travel</string>
-    <string name="slide_travel_desc">Book tickets of any transportation and travel the world!</string>
-
-    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
-    <string name="play_again">Play Again</string>
+    <string name="slide_invitation_title">Invite your friends</string>
+    <string name="slide_invitation_desc">Tell everybody how much you love EvenTour. We appreciate it</string>
 
 </resources>
