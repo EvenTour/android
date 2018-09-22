@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 
 
 class ViewPagerAdapter(val layouts : ArrayList<Int>, val context: Context) : PagerAdapter(){
-    lateinit var layoutInflater: LayoutInflater
+    private lateinit var layoutInflater: LayoutInflater
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater

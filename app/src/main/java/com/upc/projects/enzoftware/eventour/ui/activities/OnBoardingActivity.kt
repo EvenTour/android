@@ -37,10 +37,13 @@ class OnBoardingActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_on_boarding)
 
-        layouts.add(R.layout.welcome_side_intro)
-        layouts.add(R.layout.welcome_side_calendar)
-        layouts.add(R.layout.welcome_side_placeholder)
-        layouts.add(R.layout.welcome_side_invitation)
+        layouts.apply {
+            add(R.layout.welcome_side_intro)
+            add(R.layout.welcome_side_calendar)
+            add(R.layout.welcome_side_placeholder)
+            add(R.layout.welcome_side_invitation)
+        }
+
 
         addBottomDots(0)
 
