@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.util.EventLog
 import android.view.MenuItem
 import com.upc.projects.enzoftware.eventour.R
 import com.upc.projects.enzoftware.eventour.ui.fragments.EventFragment
 import com.upc.projects.enzoftware.eventour.ui.fragments.FavoriteFragment
 import com.upc.projects.enzoftware.eventour.ui.fragments.ProfileFragment
-import com.upc.projects.enzoftware.eventour.ui.fragments.SearchFragment
+import com.upc.projects.enzoftware.eventour.ui.fragments.OrganizerFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,8 +37,8 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_profile ->{
                 return ProfileFragment()
             }
-            R.id.navigation_search -> {
-                return SearchFragment()
+            R.id.navigation_organizers -> {
+                return OrganizerFragment()
             }
         }
         return EventFragment()

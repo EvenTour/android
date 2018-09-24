@@ -10,12 +10,12 @@ import android.view.ViewGroup
 import com.upc.projects.enzoftware.eventour.R
 
 
-class SearchFragment : Fragment() {
+class OrganizerFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        return inflater.inflate(R.layout.fragment_organizer, container, false)
     }
 
 

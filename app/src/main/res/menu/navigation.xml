@@ -7,9 +7,9 @@
         android:title="@string/title_events" />
 
     <item
-        android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:title="@string/title_search" />
+        android:id="@+id/navigation_organizers"
+        android:icon="@drawable/ic_public_black_24dp"
+        android:title="@string/title_organizers" />
 
     <item
         android:id="@+id/navigation_favorites"
