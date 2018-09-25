@@ -13,7 +13,7 @@ import com.androidnetworking.error.ANError
 
 import com.upc.projects.enzoftware.eventour.R
 import com.upc.projects.enzoftware.eventour.model.Event
-import com.upc.projects.enzoftware.eventour.network.EventApi
+import com.upc.projects.enzoftware.eventour.network.EvenTourApi
 import com.upc.projects.enzoftware.eventour.ui.adapters.EventAdapter
 
 class EventFragment : Fragment() {
@@ -35,7 +35,7 @@ class EventFragment : Fragment() {
         EventRecyclerView.layoutManager = EventManager
         EventRecyclerView.adapter = EventAdapter
 
-        EventApi.requesEvents(
+        EvenTourApi.requesEvents(
                 {response -> ResponseHandler(response)},
                 {anError -> ErrorHandler(anError) })
 
