@@ -21,27 +21,27 @@ import kotlinx.android.synthetic.main.fragment_organizer.*
 class OrganizerFragment : Fragment() {
 
     var Organizers:ArrayList<Organizer> = ArrayList()
-    lateinit var OrganizerRecyclerView: RecyclerView
+    lateinit var OrganizerRecyclerView:RecyclerView
     lateinit var OrganizerAdapter:OrganizerAdapter
     lateinit var OrganizerManager:RecyclerView.LayoutManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.fragment_organizer, container, false)
 
         OrganizerRecyclerView = view.findViewById(R.id.organizerRecyclerView)
         OrganizerAdapter = OrganizerAdapter(view.context,Organizers)
         OrganizerManager = GridLayoutManager(view.context, 2) as RecyclerView.LayoutManager
 
-        organizerRecyclerView.adapter = OrganizerAdapter
-        organizerRecyclerView.layoutManager = OrganizerManager
+        OrganizerRecyclerView.adapter = OrganizerAdapter
+        OrganizerRecyclerView.layoutManager = OrganizerManager
 
         EvenTourApi.requesOrganizers(
                 {response -> ResponseHandler(response)},
                 {anError -> ErrorHandler(anError)}
         )
-        
+
         return view
     }
 

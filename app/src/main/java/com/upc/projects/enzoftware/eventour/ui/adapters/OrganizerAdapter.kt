@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.organizer_item.view.*
 
 class OrganizerAdapter(val context: Context, var OrganizerList: ArrayList<Organizer>):RecyclerView.Adapter<OrganizerAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.event_item, parent, false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.organizer_item, parent, false))
     }
 
     override fun getItemCount(): Int {
