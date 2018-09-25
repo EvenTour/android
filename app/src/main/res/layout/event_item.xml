@@ -17,6 +17,8 @@
         android:id="@+id/eventName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/eventImage"/>
+        app:layout_constraintTop_toBottomOf="@id/eventImage"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
 </android.support.constraint.ConstraintLayout>

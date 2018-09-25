@@ -32,5 +32,6 @@
     <string name="title_search">Search</string>
     <string name="cd_logo">Logo</string>
     <string name="title_organizers">Organizers</string>
+    <string name="title_activity_event">EventActivity</string>
 
 </resources>

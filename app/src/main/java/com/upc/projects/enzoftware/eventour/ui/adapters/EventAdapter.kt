@@ -2,14 +2,16 @@ package com.upc.projects.enzoftware.eventour.ui.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.upc.projects.enzoftware.eventour.model.Event
+import com.upc.projects.enzoftware.eventour.R
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(val context: Context, var EventList: ArrayList<Event>):RecyclerView.Adapter<EventAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.event_item, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -17,7 +19,8 @@ class EventAdapter(val context: Context, var EventList: ArrayList<Event>):Recycl
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val event = EventList[position]
+        holder.UpdateFrom(event)
     }
 
 
@@ -28,10 +31,11 @@ class EventAdapter(val context: Context, var EventList: ArrayList<Event>):Recycl
 
         fun UpdateFrom(event:Event){
             eventImageView.setDefaultImageResId(R.mipmap.ic_launcher)
+            eventImageView.setErrorImageResId(R.mipmap.ic_launcher)
+            eventImageView.setImageUrl(event.urlImage)
 
+            eventNameView.text = event.event_name
         }
-
-
     }
 
 }
