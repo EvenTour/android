@@ -1,12 +1,14 @@
 package com.upc.projects.enzoftware.eventour.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.upc.projects.enzoftware.eventour.model.Organizer
 import com.upc.projects.enzoftware.eventour.R
+import com.upc.projects.enzoftware.eventour.ui.activities.OrganizerActivity
 import kotlinx.android.synthetic.main.organizer_item.view.*
 
 class OrganizerAdapter(val context: Context, var OrganizerList: ArrayList<Organizer>):RecyclerView.Adapter<OrganizerAdapter.ViewHolder>(){
@@ -34,6 +36,12 @@ class OrganizerAdapter(val context: Context, var OrganizerList: ArrayList<Organi
             organizerImageView.setImageUrl(organizer.urlImage)
 
             organizerTextView.text = organizer.name
+
+            itemLayout.setOnClickListener{view ->
+                val context = view.context
+                context.startActivity(Intent(context, OrganizerActivity::class.java)
+                        .putExtras(organizer.toBundle()))
+            }
 
         }
     }

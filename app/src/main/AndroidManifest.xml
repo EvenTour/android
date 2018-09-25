@@ -14,7 +14,7 @@
         <activity
             android:name=".ui.activities.OnBoardingActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.MainActivity"
             android:label="@string/title_activity_main" />
@@ -28,6 +28,15 @@
         <activity
             android:name=".ui.activities.EventActivity"
             android:label="@string/title_activity_event"
+            android:parentActivityName=".ui.activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.upc.projects.enzoftware.eventour.ui.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.OrganizerActivity"
+            android:label="@string/title_activity_organizer"
             android:parentActivityName=".ui.activities.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
