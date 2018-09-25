@@ -1,12 +1,14 @@
 package com.upc.projects.enzoftware.eventour.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.upc.projects.enzoftware.eventour.model.Event
 import com.upc.projects.enzoftware.eventour.R
+import com.upc.projects.enzoftware.eventour.ui.activities.EventActivity
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(val context: Context, var EventList: ArrayList<Event>):RecyclerView.Adapter<EventAdapter.ViewHolder>(){
@@ -35,6 +37,13 @@ class EventAdapter(val context: Context, var EventList: ArrayList<Event>):Recycl
             eventImageView.setImageUrl(event.urlImage)
 
             eventNameView.text = event.event_name
+
+            itemLayout.setOnClickListener{view ->
+                val context = view.context
+                context.startActivity(Intent(context, EventActivity::class.java)
+                        .putExtras(event.toBundle()))
+
+            }
         }
     }
 
