@@ -37,5 +37,10 @@
     <string name="contact_us">CONTACT US</string>
     <string name="login">LOGIN</string>
     <string name="no_favorites_text_view">NO TIENES EVENTOS FAVORTIOS AGREGADOS :( </string>
+    <string name="test_name">Rodrigo Guadalupe</string>
+    <string name="follow_me">Follow Me</string>
+    <string name="test_email">rodrigo_guadalupe@gmail.com</string>
+    <string name="show_all_comments">Show all comments</string>
+    <string name="test_phone">+266 225 225</string>
 
 </resources>
