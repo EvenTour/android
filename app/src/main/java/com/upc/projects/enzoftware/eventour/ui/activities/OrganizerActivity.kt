@@ -1,5 +1,7 @@
 package com.upc.projects.enzoftware.eventour.ui.activities
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -8,6 +10,10 @@ import com.upc.projects.enzoftware.eventour.model.Organizer
 
 import kotlinx.android.synthetic.main.activity_organizer.*
 import kotlinx.android.synthetic.main.content_organizer.*
+import android.widget.Toast
+import android.content.ActivityNotFoundException
+import android.util.Log
+
 
 class OrganizerActivity : AppCompatActivity() {
 
@@ -26,13 +32,26 @@ class OrganizerActivity : AppCompatActivity() {
             setImageUrl(organizer.urlImage)
         }
 
-        val contact = "Contact: ${organizer.contactUrl}"
         val field = "Field: ${organizer.field}"
         val event = "Event organized: ${organizer.event_id} "
         OrganizerDetailName.text = organizer.name
         OrganizerDetailField.text = field
-        OrganizerDetailContact.text = contact
+        OrganizerDetailContact.setOnClickListener {
+            openWebPage(organizer.contactUrl!!)
+        }
         OrganizerDetailEvent.text = event
+
+    }
+
+    fun openWebPage(url: String) {
+        try {
+            val webpage = Uri.parse(url)
+            val myIntent = Intent(Intent.ACTION_VIEW, webpage)
+            startActivity(myIntent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "No application can handle this request. Please install a web browser or check your URL.", Toast.LENGTH_LONG).show()
+            e.printStackTrace()
+        }
 
     }
 
