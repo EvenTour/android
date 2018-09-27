@@ -30,7 +30,7 @@ class EventFragment : Fragment() {
 
         EventRecyclerView = view.findViewById(R.id.eventRecyclerView)
         EventAdapter = EventAdapter(view.context,Events)
-        EventManager = GridLayoutManager(view.context,2) as RecyclerView.LayoutManager
+        EventManager = GridLayoutManager(view.context,1) as RecyclerView.LayoutManager
 
         EventRecyclerView.layoutManager = EventManager
         EventRecyclerView.adapter = EventAdapter

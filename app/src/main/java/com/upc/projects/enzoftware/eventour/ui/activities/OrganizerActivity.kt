@@ -24,6 +24,7 @@ class OrganizerActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
         val intent = intent?: return
         val organizer = Organizer.from(intent.extras)
         with(OrganizerDetailImage){
@@ -32,9 +33,10 @@ class OrganizerActivity : AppCompatActivity() {
             setImageUrl(organizer.urlImage)
         }
 
+        supportActionBar?.title = organizer.name
+
         val field = "Field: ${organizer.field}"
         val event = "Event organized: ${organizer.event_id} "
-        OrganizerDetailName.text = organizer.name
         OrganizerDetailField.text = field
         OrganizerDetailContact.setOnClickListener {
             openWebPage(organizer.contactUrl!!)

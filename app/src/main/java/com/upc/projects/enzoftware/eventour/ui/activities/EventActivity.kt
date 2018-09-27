@@ -29,7 +29,7 @@ class EventActivity : AppCompatActivity() {
         val start = "Start date: ${event.startDate}"
         val end = "End date: ${event.endDate}"
         val duration = "Duration of the event: ${event.duration} days"
-        EventDetailName.text = event.event_name
+        supportActionBar?.title = event.event_name
         EventDetailStart.text = start
         EventDetailEnd.text = end
         EventDetailDuration.text = duration
