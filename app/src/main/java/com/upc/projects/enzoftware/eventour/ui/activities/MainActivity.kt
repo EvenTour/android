@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         navigation.selectedItemId = R.id.navigation_event
+
+        toolbar.title = resources.getString(R.string.app_name)
     }
 
     private fun fragmentFor(item: MenuItem):Fragment{

@@ -36,5 +36,6 @@
     <string name="title_activity_organizer">OrganizerActivity</string>
     <string name="contact_us">CONTACT US</string>
     <string name="login">LOGIN</string>
+    <string name="no_favorites_text_view">NO TIENES EVENTOS FAVORTIOS AGREGADOS :( </string>
 
 </resources>
