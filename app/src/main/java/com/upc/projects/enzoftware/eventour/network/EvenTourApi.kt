@@ -16,7 +16,7 @@ class EvenTourApi {
 
         fun requesEvents(responseHandler:(List<Event>) -> Unit, errorHandler:(ANError) -> Unit){
             AndroidNetworking.get(EvenTourApi.eventsUrl)
-                    .setPriority(Priority.MEDIUM)
+                    .setPriority(Priority.IMMEDIATE)
                     .setTag(EvenTourApi.tag)
                     .build()
                     .getAsObjectList(Event::class.java, object:ParsedRequestListener<List<Event>>{
@@ -32,7 +32,7 @@ class EvenTourApi {
 
         fun requesOrganizers(responseHandler:(List<Organizer>) -> Unit, errorHandler:(ANError) -> Unit){
             AndroidNetworking.get(EvenTourApi.organizersUrl)
-                    .setPriority(Priority.MEDIUM)
+                    .setPriority(Priority.IMMEDIATE)
                     .setTag(EvenTourApi.tag)
                     .build()
                     .getAsObjectList(Organizer::class.java, object:ParsedRequestListener<List<Organizer>>{
