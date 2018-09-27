@@ -28,18 +28,21 @@
         android:id="@+id/EventDetailStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/EventDetailImage"/>
 
     <TextView
         android:id="@+id/EventDetailEnd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/EventDetailStart"/>
 
     <TextView
         android:id="@+id/EventDetailDuration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/EventDetailEnd"/>
 
 </android.support.constraint.ConstraintLayout>

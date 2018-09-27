@@ -8,6 +8,8 @@ import com.upc.projects.enzoftware.eventour.model.Event
 
 import kotlinx.android.synthetic.main.activity_event.*
 import kotlinx.android.synthetic.main.content_event.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
 
 class EventActivity : AppCompatActivity() {
 
@@ -15,7 +17,7 @@ class EventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
         setSupportActionBar(toolbar)
-
+        val dt = SimpleDateFormat("yyyyy-mm-dd")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val intent = intent?: return
@@ -26,8 +28,8 @@ class EventActivity : AppCompatActivity() {
             setImageUrl(event.urlImage)
         }
 
-        val start = "Start date: ${event.startDate}"
-        val end = "End date: ${event.endDate}"
+        val start = "Start date: ${dt.parse(event.startDate)}"
+        val end = "End date: ${dt.parse(event.endDate)}"
         val duration = "Duration of the event: ${event.duration} days"
         supportActionBar?.title = event.event_name
         EventDetailStart.text = start

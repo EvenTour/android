@@ -130,7 +130,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
     private fun launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false)
-        startActivity(Intent(this@OnBoardingActivity, MainActivity::class.java))
+        startActivity(Intent(this@OnBoardingActivity, LoginActivity::class.java))
         finish()
     }
 }
