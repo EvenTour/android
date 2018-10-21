@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
-    tools:context=".ui.activities.LoginActivity">
+    tools:context=".ui.activities.RegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="EvenTour"
+                android:text="@string/eventour"
                 android:textColor="@color/icons"
                 android:textSize="22sp"
                 android:textStyle="bold" />
@@ -46,10 +46,10 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/usernameTextView"
+                android:id="@+id/nameRegisterTextView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Username"
+                android:hint="Name"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textColor="@color/icons"
@@ -62,7 +62,23 @@
                 android:background="@color/colorPrimaryDark" />
 
             <EditText
-                android:id="@+id/passwordTextView"
+                android:id="@+id/emailRegisterTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/icons"
+                android:textColorHint="@color/icons"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/passRegisterTextView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Password"
@@ -75,29 +91,22 @@
 
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimaryDark"
-                android:text="@string/login"
+                android:text="@string/register"
                 android:textColor="@color/icons" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:text="@string/forgot_pass"
-                android:textColor="@color/icons" />
 
             <TextView
-                android:id="@+id/registerTextView"
+                android:id="@+id/alreadyRegistered"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
-                android:text="@string/new_account"
+                android:text="@string/exiting_account"
                 android:textColor="@color/colorAccent"
                 android:textStyle="bold" />
         </LinearLayout>

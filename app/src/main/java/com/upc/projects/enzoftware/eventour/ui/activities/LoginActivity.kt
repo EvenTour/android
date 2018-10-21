@@ -21,15 +21,19 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         loginButton.setOnClickListener {
-            view -> login()
+            login()
+        }
+
+        registerTextView.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
     }
 
     private fun login(){
         val emailView:TextView = findViewById(R.id.usernameTextView)
         val passwordView:TextView = findViewById(R.id.passwordTextView)
-        var email = (emailView.text).toString()
-        var password = (passwordView.text).toString()
+        val email = (emailView.text).toString()
+        val password = (passwordView.text).toString()
 
         if(!email.isEmpty() && !password.isEmpty()){
             mAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(this@LoginActivity, OnCompleteListener { task ->
