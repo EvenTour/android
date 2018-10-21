@@ -36,14 +36,14 @@ class LoginActivity : AppCompatActivity() {
         val password = (passwordView.text).toString()
 
         if(!email.isEmpty() && !password.isEmpty()){
-            mAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(this@LoginActivity, OnCompleteListener { task ->
+            mAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(this@LoginActivity) { task ->
                 if(task.isSuccessful){
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 }
                 else{
                     Toast.makeText(this@LoginActivity, "Wrong username or password", Toast.LENGTH_SHORT).show()
                 }
-            })
+            }
         }
         else{
             Toast.makeText(this@LoginActivity, "Fill up all the blank spaces", Toast.LENGTH_SHORT).show()

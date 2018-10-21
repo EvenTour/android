@@ -2,10 +2,8 @@ package com.upc.projects.enzoftware.eventour.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
@@ -46,7 +44,7 @@ class RegisterActivity : AppCompatActivity() {
         val password = (passTextView.text).toString()
 
         if(!name.isEmpty() && !email.isEmpty() && !password.isEmpty()){
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this@RegisterActivity, OnCompleteListener { task ->
+            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this@RegisterActivity){ task ->
                 if(task.isSuccessful) {
                     startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
                     val user = mAuth.currentUser
@@ -63,12 +61,15 @@ class RegisterActivity : AppCompatActivity() {
                         getString(R.string.already_registered) -> {
                             Toast.makeText(this@RegisterActivity, "That email adress is already related with an account", Toast.LENGTH_SHORT).show()
                         }
+                        getString(R.string.invalid_email) -> {
+                            Toast.makeText(this@RegisterActivity, "Insert a valid email address", Toast.LENGTH_SHORT).show()
+                        }
                         else -> {
                             Toast.makeText(this@RegisterActivity, "Something went wrong. Please try later", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
-            })
+            }
         }else{
             Toast.makeText(this@RegisterActivity, "Complete all the fields requested", Toast.LENGTH_SHORT).show()
         }

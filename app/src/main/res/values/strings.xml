@@ -48,6 +48,7 @@
     <string name="show_all_comments">Show all comments</string>
     <string name="test_phone">+266 225 225</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="invalid_email">com.google.firebase.auth.FirebaseAuthInvalidCredentialsException: The email address is badly formatted.</string>
     <string name="weak_password">com.google.firebase.auth.FirebaseAuthWeakPasswordException: The given password is invalid. [ Password should be at least 6 characters ]</string>
     <string name="already_registered">com.google.firebase.auth.FirebaseAuthUserCollisionException: The email address is already in use by another account.</string>
 </resources>
