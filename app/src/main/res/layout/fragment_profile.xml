@@ -6,9 +6,6 @@
     android:orientation="vertical"
     tools:context=".ui.fragments.ProfileFragment">
 
-
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="405dp">
@@ -23,8 +20,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/mark"/>
+                android:src="@drawable/default_user"/>
             <TextView
+                android:id="@+id/userProfileName"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
