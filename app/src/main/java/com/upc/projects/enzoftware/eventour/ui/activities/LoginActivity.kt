@@ -50,6 +50,10 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         }*/
 
+        forgotPasswordButton.setOnClickListener{
+            startActivity(Intent(this@LoginActivity, RecoverPasswordActivity::class.java))
+        }
+
         registerTextView.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
         }
