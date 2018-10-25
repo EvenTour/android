@@ -24,6 +24,15 @@
         android:layout_height="180dp"
         app:layout_constraintTop_toBottomOf="@id/EventDetailName"/>
 
+    <ImageButton
+        android:id="@+id/bookmarkImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/EventDetailImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_bookmark_border_black_24dp"/>
+
     <TextView
         android:id="@+id/EventDetailStart"
         android:layout_width="match_parent"

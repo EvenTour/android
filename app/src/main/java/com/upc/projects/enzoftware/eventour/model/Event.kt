@@ -47,4 +47,34 @@ data class Event(
 
         return bundle
     }
+
+    fun isBookmarked() : Boolean {
+        return Bookmark.listFor(Integer.toString(id!!)).isNotEmpty()
+    }
+
+    fun setBookmarked(isBookmarked: Boolean) {
+        if (isBookmarked == isBookmarked()) {
+            return
+        }
+        if (isBookmarked) {
+            val bookmark = Bookmark()
+            bookmark.eventId = Integer.toString(id!!)
+            bookmark.urlImage =urlImage
+            bookmark.eventName =event_name
+            bookmark.startDate=startDate
+            bookmark.endDate=endDate
+            bookmark.duration= Integer.toString(duration!!)
+            bookmark.createdTime=createdAt
+            bookmark.updatedTime=updatedAt
+
+
+
+            bookmark.save()
+        } else {
+            Bookmark.listFor(Integer.toString(id!!)).map { bookmark ->
+                bookmark.delete()  }
+        }
+
+    }
+
 }
