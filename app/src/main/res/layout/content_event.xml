@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
-        app:layout_constraintTop_toBottomOf="@id/EventDetailImage"
+        app:layout_constraintTop_toBottomOf="@id/EventDetailDuration"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_bookmark_border_black_24dp"/>
 

@@ -52,10 +52,12 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
         forgotPasswordButton.setOnClickListener{
             startActivity(Intent(this@LoginActivity, RecoverPasswordActivity::class.java))
+
         }
 
         registerTextView.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+
         }
     }
 
@@ -69,6 +71,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             mAuth.signInWithEmailAndPassword(email , password).addOnCompleteListener(this@LoginActivity) { task ->
                 if(task.isSuccessful){
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finish()
                 }
                 else{
                     Toast.makeText(this@LoginActivity, "Wrong username or password", Toast.LENGTH_SHORT).show()
@@ -81,7 +84,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     }
 
     private fun signInGoogle(){
-        val signInIntent = mGoogleSignInClient.getSignInIntent()
+        val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, 123)
     }
 
@@ -106,6 +109,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 .addOnCompleteListener(this@LoginActivity) { task ->
                     if(task.isSuccessful){
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                        finish()
                     }
                     else{
                         Toast.makeText(this@LoginActivity, "Wrong username or password", Toast.LENGTH_SHORT).show()

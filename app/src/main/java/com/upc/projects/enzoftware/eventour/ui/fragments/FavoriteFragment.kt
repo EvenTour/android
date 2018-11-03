@@ -35,7 +35,7 @@ class FavoriteFragment : Fragment() {
 
 
         BookmarkAdapter = BookmarkAdapter(view.context,Events)
-        EventManager = GridLayoutManager(view.context,1) as RecyclerView.LayoutManager
+        EventManager = GridLayoutManager(view.context,1)
 
         EventRecyclerView = view.eventsRecyclerView
 

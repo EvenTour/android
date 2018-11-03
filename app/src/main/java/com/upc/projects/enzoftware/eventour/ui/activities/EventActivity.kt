@@ -43,7 +43,7 @@ class EventActivity : AppCompatActivity() {
         EventDetailDuration.text = duration
 
 
-        bookmarkImageButton.setOnClickListener { view ->
+        bookmarkImageButton.setOnClickListener { _ ->
             isBookmarked = !isBookmarked
             event!!.setBookmarked(isBookmarked)
             updateBookmarkImage()

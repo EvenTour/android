@@ -5,9 +5,9 @@ import android.content.SharedPreferences
 
 class PreferencesManager{
 
-    lateinit var preferences : SharedPreferences
-    lateinit var editor : SharedPreferences.Editor
-    lateinit var context : Context
+    var preferences : SharedPreferences
+    var editor : SharedPreferences.Editor
+    var context : Context
 
     var PRIVATE_MODE = 0
 

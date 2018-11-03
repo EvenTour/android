@@ -32,7 +32,7 @@ class OrganizerFragment : Fragment() {
 
         OrganizerRecyclerView = view.findViewById(R.id.organizerRecyclerView)
         OrganizerAdapter = OrganizerAdapter(view.context,Organizers)
-        OrganizerManager = GridLayoutManager(view.context, 2) as RecyclerView.LayoutManager
+        OrganizerManager = GridLayoutManager(view.context, 2)
 
         OrganizerRecyclerView.adapter = OrganizerAdapter
         OrganizerRecyclerView.layoutManager = OrganizerManager
