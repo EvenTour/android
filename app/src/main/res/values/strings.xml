@@ -59,4 +59,7 @@
     <string name="email_hint">Email</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
+    <string name="report">Report</string>
+    <string name="q_amp_a"><![CDATA[Q&A]]></string>
+    <string name="Rate">Rate</string>
 </resources>

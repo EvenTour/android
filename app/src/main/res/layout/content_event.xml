@@ -54,4 +54,32 @@
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/EventDetailEnd"/>
 
+    <LinearLayout
+        android:id="@+id/layoutButtonsEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/bookmarkImageButton">
+        
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/report"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/q_amp_a"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/Rate"/>
+        
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
