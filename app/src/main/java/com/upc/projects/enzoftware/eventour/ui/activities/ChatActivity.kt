@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
@@ -57,7 +58,7 @@ class ChatActivity : AppCompatActivity() {
             }
         })
 
-        mDatabase.child("chat").addChildEventListener(object: ChildEventListener{
+        mDatabase.addChildEventListener(object: ChildEventListener{
             override fun onCancelled(p0: DatabaseError) {
             }
 
@@ -70,6 +71,7 @@ class ChatActivity : AppCompatActivity() {
             override fun onChildAdded(p0: DataSnapshot, p1: String?) {
                 val m = p0.getValue(Message::class.java)
                 MessageAdapter.addMessage(m!!)
+                Log.e("message", "message readed")
             }
 
             override fun onChildRemoved(p0: DataSnapshot) {

@@ -3,6 +3,7 @@ package com.upc.projects.enzoftware.eventour.ui.activities
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.upc.projects.enzoftware.eventour.R
 import kotlinx.android.synthetic.main.activity_rate_event.*
 import com.hsalf.smilerating.SmileRating
@@ -41,6 +42,12 @@ class RateEventActivity : AppCompatActivity() {
                     rate = 5
                 }
             }
+        }
+
+
+        send_opinion.setOnClickListener {
+            Toast.makeText(this,"Thanks!", Toast.LENGTH_SHORT).show()
+            finish()
         }
 
     }
