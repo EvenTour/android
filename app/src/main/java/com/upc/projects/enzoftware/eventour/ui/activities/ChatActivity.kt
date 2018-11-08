@@ -18,7 +18,8 @@ import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
-    lateinit var mDatabase: DatabaseReference
+    lateinit var mDatabase: FirebaseDatabase
+    lateinit var mDatabaseReference: DatabaseReference
     var MessageList:ArrayList<Message> = ArrayList()
     lateinit var MessageRecyclerView: RecyclerView
     lateinit var MessageAdapter:MessageAdapter
@@ -28,7 +29,8 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        mDatabase = FirebaseDatabase.getInstance().getReferenceFromUrl(getString(R.string.database_reference))
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase.getReferenceFromUrl(getString(R.string.database_reference)).child("chat")
         MessageRecyclerView = findViewById(R.id.recyclerViewMessages)
         MessageAdapter = MessageAdapter(this, MessageList)
         MessageManager = GridLayoutManager(this,1)
@@ -46,8 +48,7 @@ class ChatActivity : AppCompatActivity() {
             val message = Message(chatMessage.text.toString(),"User name",
                     " ", "text", currentTime)
 
-            MessageAdapter.addMessage(message)
-            mDatabase.child("chat").push().setValue(message)
+            mDatabaseReference.push().setValue(message)
             chatMessage.text = ""
         }
 
@@ -58,7 +59,7 @@ class ChatActivity : AppCompatActivity() {
             }
         })
 
-        mDatabase.addChildEventListener(object: ChildEventListener{
+        mDatabaseReference.addChildEventListener(object: ChildEventListener{
             override fun onCancelled(p0: DatabaseError) {
             }
 

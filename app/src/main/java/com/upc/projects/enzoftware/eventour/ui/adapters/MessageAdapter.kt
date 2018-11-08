@@ -27,7 +27,7 @@ class MessageAdapter(val context: Context, var MessageList: ArrayList<Message>)
 
         fun addMessage(message: Message) {
             MessageList.add(message)
-            notifyDataSetChanged()
+            notifyItemInserted(MessageList.size)
         }
 
         class ViewHolder(view: View):RecyclerView.ViewHolder(view){
