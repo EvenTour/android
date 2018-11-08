@@ -11,7 +11,8 @@ import com.hsalf.smilerating.SmileRating
 
 class RateEventActivity : AppCompatActivity() {
 
-    val TAG = "RATE SMILE"
+    val tagRateEvent = "RATE SMILE"
+    var rate : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,20 +20,25 @@ class RateEventActivity : AppCompatActivity() {
 
         smile_rating.setOnSmileySelectionListener { smiley, reselected ->
             when (smiley) {
+                SmileRating.TERRIBLE -> {
+                    Log.i(tagRateEvent, "Terrible")
+                    rate = 1
+                }
                 SmileRating.BAD -> {
-                    Log.i(TAG, "Bad")
-                }
-                SmileRating.GOOD -> {
-                    Log.i(TAG, "Good")
-                }
-                SmileRating.GREAT -> {
-                    Log.i(TAG, "Great")
+                    Log.i(tagRateEvent, "Bad")
+                    rate = 2
                 }
                 SmileRating.OKAY -> {
-                    Log.i(TAG, "Okay")
+                    Log.i(tagRateEvent, "Okay")
+                    rate = 3
                 }
-                SmileRating.TERRIBLE -> {
-                    Log.i(TAG, "Terrible")
+                SmileRating.GOOD -> {
+                    Log.i(tagRateEvent, "Good")
+                    rate = 4
+                }
+                SmileRating.GREAT -> {
+                    Log.i(tagRateEvent, "Great")
+                    rate = 5
                 }
             }
         }
