@@ -12,9 +12,12 @@ class ReportEventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report_event)
 
+
+
         report_button.setOnClickListener {
-            Toast.makeText(this,"Thanks!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Thanks!", Toast.LENGTH_SHORT).show()
             finish()
         }
+
     }
 }

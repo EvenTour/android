@@ -52,6 +52,10 @@ class EventActivity : AppCompatActivity() {
             updateBookmarkImage()
         }
 
+        q_a_button.setOnClickListener{
+            startActivity(Intent(this, ChatActivity::class.java))
+        }
+
         rate_button.setOnClickListener {
             startActivity(Intent(this, RateEventActivity::class.java))
         }
