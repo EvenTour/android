@@ -62,4 +62,7 @@
     <string name="report">Report</string>
     <string name="q_amp_a"><![CDATA[Q&A]]></string>
     <string name="Rate">Rate</string>
+    <string name="opinion_text">Your opinion it\'s important for us</string>
+    <string name="opinion_question">What is your opinion about this event?</string>
+    <string name="send">Send</string>
 </resources>

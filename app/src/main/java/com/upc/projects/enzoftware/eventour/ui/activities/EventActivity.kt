@@ -1,5 +1,6 @@
 package com.upc.projects.enzoftware.eventour.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -52,7 +53,7 @@ class EventActivity : AppCompatActivity() {
         }
 
         rate_button.setOnClickListener {
-
+            startActivity(Intent(this, RateEventActivity::class.java))
         }
 
         report_button.setOnClickListener {
