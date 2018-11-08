@@ -32,7 +32,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewMessages"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_margin="5sp">
@@ -53,7 +53,7 @@
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/charSendButton"
+            android:id="@+id/chatSendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Send"/>

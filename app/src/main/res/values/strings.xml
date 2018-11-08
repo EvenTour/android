@@ -23,6 +23,8 @@
     <string name="slide_invitation_title">Invite your friends</string>
     <string name="slide_invitation_desc">Tell everybody how much you love EvenTour. We appreciate it</string>
 
+    <string name="database_reference">https://eventour-ea6ff.firebaseio.com/</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="eventour">EvenTour</string>
     <string name="forgot_pass">Forgot password?</string>

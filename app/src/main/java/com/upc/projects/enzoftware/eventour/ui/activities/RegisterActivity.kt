@@ -24,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         mAuth = FirebaseAuth.getInstance()
-        mDatabase = FirebaseDatabase.getInstance().getReferenceFromUrl("https://eventour-ea6ff.firebaseio.com/")
+        mDatabase = FirebaseDatabase.getInstance().getReferenceFromUrl(getString(R.string.database_reference))
 
         registerButton.setOnClickListener{
            register()
