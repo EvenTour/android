@@ -60,6 +60,10 @@ class EventActivity : AppCompatActivity() {
             startActivity(Intent(this, ReportEventActivity::class.java))
         }
 
+        q_a_button.setOnClickListener {
+            startActivity(Intent(this, QuestionEventActivity::class.java))
+        }
+
         updateBookmarkImage()
 
     }

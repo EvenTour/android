@@ -68,4 +68,11 @@
     <string name="please_tell_us_whats_happen">Please tell us whats happen</string>
     <string name="report_hin">Report the problem</string>
     <string name="report_button_text">REPORT</string>
+    <string name="question_button_text">Send</string>
+    <string name="question_edit">Your questions will be answered...</string>
+    <string name="make_your_questions">Ask your question FREE </string>
+    <string name="title_activity_question_event">QuestionEventActivity</string>
+
+
+
 </resources>

@@ -82,6 +82,10 @@
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme" />
         <activity
+            android:name=".ui.activities.QuestionEventActivity"
+            android:label="@string/title_activity_question_event"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".ui.activities.RecoverPasswordActivity"
             android:label="@string/title_activity_recover_password"
             android:parentActivityName=".ui.activities.LoginActivity"
