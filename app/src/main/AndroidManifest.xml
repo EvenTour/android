@@ -91,7 +91,11 @@
                 android:value="com.upc.projects.enzoftware.eventour.ui.activities.LoginActivity" />
         </activity>
         <activity android:name=".ui.activities.RateEventActivity" />
-        <activity android:name=".ui.activities.ReportEventActivity"></activity>
+        <activity android:name=".ui.activities.ReportEventActivity" />
+        <activity
+            android:name=".ui.activities.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
