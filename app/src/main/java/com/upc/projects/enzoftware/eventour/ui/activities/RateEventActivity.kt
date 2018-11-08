@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.upc.projects.enzoftware.eventour.R
 import kotlinx.android.synthetic.main.activity_rate_event.*
 import com.hsalf.smilerating.SmileRating
-import kotlinx.android.synthetic.main.content_event.*
+
 
 
 class RateEventActivity : AppCompatActivity() {
