@@ -90,7 +90,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.upc.projects.enzoftware.eventour.ui.activities.LoginActivity" />
         </activity>
-        <activity android:name=".ui.activities.RateEventActivity"></activity>
+        <activity android:name=".ui.activities.RateEventActivity" />
+        <activity android:name=".ui.activities.ReportEventActivity"></activity>
     </application>
 
 </manifest>

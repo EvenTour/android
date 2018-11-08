@@ -57,7 +57,7 @@ class EventActivity : AppCompatActivity() {
         }
 
         report_button.setOnClickListener {
-
+            startActivity(Intent(this, ReportEventActivity::class.java))
         }
 
         updateBookmarkImage()

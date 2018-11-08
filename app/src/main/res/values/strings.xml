@@ -65,4 +65,7 @@
     <string name="opinion_text">Your opinion it\'s important for us</string>
     <string name="opinion_question">What is your opinion about this event?</string>
     <string name="send">Send</string>
+    <string name="please_tell_us_whats_happen">Please tell us whats happen</string>
+    <string name="report_hin">Report the problem</string>
+    <string name="report_button_text">REPORT</string>
 </resources>
