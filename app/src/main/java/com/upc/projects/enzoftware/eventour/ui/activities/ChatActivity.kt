@@ -1,18 +1,17 @@
 package com.upc.projects.enzoftware.eventour.ui.activities
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Button
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.upc.projects.enzoftware.eventour.R
 import com.upc.projects.enzoftware.eventour.model.Message
 import com.upc.projects.enzoftware.eventour.ui.adapters.MessageAdapter
 
-import kotlinx.android.synthetic.main.activity_chat.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -40,7 +39,7 @@ class ChatActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
 
             val chatMessage = findViewById<TextView>(R.id.chatMessage)
-            val sdf = SimpleDateFormat("HH:mm")
+            val sdf = SimpleDateFormat("HH:mm a")
             val currentTime = sdf.format(Calendar.getInstance().time)
 
             val message = Message(chatMessage.text.toString(),"User name",
