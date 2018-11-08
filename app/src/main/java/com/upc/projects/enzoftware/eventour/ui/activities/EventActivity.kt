@@ -37,6 +37,8 @@ class EventActivity : AppCompatActivity() {
         val start = "Start date: ${dt.parse(event!!.startDate)}"
         val end = "End date: ${dt.parse(event!!.endDate)}"
         val duration = "Duration of the event: ${event!!.duration} days"
+
+
         supportActionBar?.title = event!!.event_name
         EventDetailStart.text = start
         EventDetailEnd.text = end
@@ -48,6 +50,15 @@ class EventActivity : AppCompatActivity() {
             event!!.setBookmarked(isBookmarked)
             updateBookmarkImage()
         }
+
+        rate_button.setOnClickListener {
+
+        }
+
+        report_button.setOnClickListener {
+
+        }
+
         updateBookmarkImage()
 
     }

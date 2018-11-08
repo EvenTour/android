@@ -63,21 +63,27 @@
         app:layout_constraintTop_toBottomOf="@id/bookmarkImageButton">
         
         <Button
+            android:id="@+id/report_button"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="@string/report"/>
 
         <Button
+            android:id="@+id/q_a_button"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="@string/q_amp_a"/>
 
         <Button
+            android:id="@+id/rate_button"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="@string/Rate"/>
         
     </LinearLayout>
